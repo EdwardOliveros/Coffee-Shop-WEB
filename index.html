@@ -60,17 +60,27 @@
                 </ul>
 
                 <!--BARRA DE BUSQUEDA-->
-                <form class="search-form">
-                    <input type="search" placeholder="Buscar...">
-                    <button class="btn-search">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
-                </form>
+                <div class="btn-search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
 
             </nav>
         </div>
 
     </header>
+
+    <div class="container-bars-search" id="container-bars-search">
+        <input type="text" id="inputSearch" placeholder="Que deseas buscar">
+    </div>
+
+    <ul class="box-search" id="box-search">
+        <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i>Cafe irish</a></li>
+        <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i>Cafe Americano</a></li>
+        <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i>Cafe con Helado</a></li>
+        <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i>Cafe Indu</a></li>
+    </ul>
+
+    <div class="cover-container-search" id="cover-container-search"></div>
 
     <!--BANNER PRINCIPAL-->
     <section class="banner">
@@ -387,6 +397,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 
     <script
         src="https://kit.fontawesome.com/5257ead9f1.js" 
