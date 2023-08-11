@@ -27,8 +27,9 @@ inputSearch.onkeyup = (e) => {
 
 
 
-const showSuggestions = list =>{
+const showSuggestions = list => {
     let listData;
+
     if (!list.length){
 
         userValue = inputSearch.value;
@@ -38,4 +39,4 @@ const showSuggestions = list =>{
         listData = list.join(' ');
     }
     boxSuggestions.innerHTML = listData;
-}
+};
