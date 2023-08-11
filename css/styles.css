@@ -12,7 +12,7 @@
 *{
     padding: 0;
     margin: 0;
-    font-family: superFuntime;
+    
     box-sizing: border-box;
 }
 
@@ -158,73 +158,72 @@
 
 /*-----------BARRA BUSQUEDA---------------*/
 
-.btn-search i{
-    font-size: 2rem;
+.container-search{
+    max-width: 800px;
     color: #fff;
-    background-color: var(--primary-color);
+}
+
+.search-input-box{
+    width: 100%;
+    background-color: var(--dark-color);
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 0 1px 5px 3px rgba(0, 0, 0, 0.12);
+}
+
+.search-input-box input{
+    width: 100%;
+    border: none;
+    outline: 5px;
+    padding: 0 60px 0 20px;
+    font-style: 18px;
+}
+
+#icon-search{
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 22px;
+    color: #fff;
     display: flex;
     cursor: pointer;
     transition: all 300ms;
     border-bottom: none;
 }
 
-.btn-search i:hover{
+#icon-search:hover{
     color: var(--dark-color);
 }
 
-.container-bars-search{
-    position: fixed;
-    top: -10px;
-    width: 100%;
-    background-color: #fff;
-    padding: 20px;
-    z-index: 9;
+
+/*CONTENEDOR DE SUGERENCIAS*/
+.container-suggestions{
+    max-height: 280px;
+    opacity: 0;
+    pointer-events: none;
+    padding: 0;
+    overflow-y: auto;
 }
 
-.container-bars-search input{
+.search-input-box.active .container-suggestions{
+    opacity: 1;
+    pointer-events: auto;
+    padding: 10px 8px;
+}
+
+.search-input-box.active .container-suggestions li{
     display: block;
-    width: 1200px;
-    margin: auto;
-    padding: 10px;
-    font-size: 18px;
-    outline: 0;
-    
 }
 
-.box-search{
-    position: fixed;
-    top: 165px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 1200px;
-    background-color: #fff;
-    z-index: 8;
-}
-
-.box-search li a{
-    display: block;
-    width: 1200px;
-    color: #777777;
-    padding: 12px 20px;
-}
-
-.box-search li a:hover{
-    background-color: #777;
-}
-
-.box-search li a i{
-    margin-right: 10px;
-    color: #777777;
-}
-
-.cover-container-search{
+.container-suggestions li{
+    list-style: none;
     width: 100%;
-    height: 100%;
-    position: fixed;
-    left: 0;
-    background: rgba(0, 0, 0, .5);
-    z-index: 7;
+    padding: 8px 12px;
+    border-radius: 5px;
+    display: none;
 }
+
+
 
 /*-----------BANNER---------------*/
 
