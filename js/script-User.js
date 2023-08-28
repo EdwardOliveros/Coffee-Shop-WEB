@@ -12,3 +12,22 @@ btnSignUp.addEventListener("click", e =>{
     formLogin.classList.add("hide");
     formResgister.classList.remove("hide");
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const usernameForm = document.getElementById("usernameForm");
+    
+    usernameForm.addEventListener("submit", function(event) {
+      event.preventDefault();
+      
+      const usernameInput = document.getElementById("username");
+      const username = usernameInput.value;
+      
+      localStorage.setItem("username", username);
+
+      const welcomeMessage = `¡Bienvenido, ${username}!`;
+        alert(welcomeMessage);
+      
+      window.location.href = "index.html";
+    });
+  });
+  
