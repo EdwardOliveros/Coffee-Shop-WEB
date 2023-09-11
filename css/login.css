@@ -171,5 +171,5 @@ body{
 
 .hide{
     position: absolute;
-    transform: translateY(-300%);
+    transform: translateY(-400%);
 }
